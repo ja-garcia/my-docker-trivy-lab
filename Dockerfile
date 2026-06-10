@@ -27,7 +27,7 @@
 
 # === IMAGEN BASE ===
 # Cambiar esta imagen base (debian:13-slim es más moderna y segura)
-FROM debian:13-slim
+FROM debian:12-slim
 
 # === INSTALACIÓN DE PAQUETES ===
 # Cada RUN es una capa nueva → imagen más grande, cache ineficiente
