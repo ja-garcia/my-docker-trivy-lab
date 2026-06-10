@@ -34,11 +34,7 @@ FROM debian:13-slim
 # Se han quitado estos paquetes inseguros (curl, wget) ya no pasan el escaneo de Trivy (CVE's críticas)
 # RUN apt-get install -y curl
 # RUN apt-get install -y wget
-RUN apt-get update && \
-    apt-get install -y openssl && \
-    apt-get remove --purge -y perl-base && \
-    apt-get autoremove -y && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y openssl && apt-get remove --purge -y perl-base && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 # === USUARIO ===
 # Crear usuario no-root y cambiar a él
